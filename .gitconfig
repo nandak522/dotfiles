@@ -1,0 +1,14 @@
+[user]
+	name = Nanda Kishore
+	email = madhav.bnk@gmail.com
+[apply]
+	whitespace = nowarn
+[color]
+	ui = true
+[format]
+    pretty="%Cgreen%h %Cred%ar(%cd) %Creset%s %Cblue(%cn)"
+[core]
+	editor = /usr/bin/vim
+	autocrlf = true
+[log]
+    date = local
