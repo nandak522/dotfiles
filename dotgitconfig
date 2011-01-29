@@ -3,6 +3,11 @@
 	email = madhav.bnk@gmail.com
 [apply]
 	whitespace = nowarn
+[alias]
+    st = status
+    ci = commit
+    co = checkout
+    br = branch
 [color]
 	ui = true
 [format]
