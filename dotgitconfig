@@ -2,18 +2,24 @@
 	name = Nanda Kishore
 	email = madhav.bnk@gmail.com
 [apply]
-	whitespace = nowarn
+	whitespace = fix
 [alias]
     st = status
     ci = commit
     co = checkout
     br = branch
 [color]
-	ui = true
+    branch = auto
+    diff = auto
+    interactive = auto
+    ui = always
+    status = auto
+    pager = true
 [format]
     pretty="%Cgreen%h %Cred%ar(%cd) %Creset%s %Cblue(%cn)"
 [core]
 	editor = /usr/bin/vim
 	autocrlf = true
+    pager = less -FRSX
 [log]
     date = local
