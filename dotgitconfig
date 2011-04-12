@@ -8,6 +8,7 @@
     ci = commit
     co = checkout
     br = branch
+    lg = log --graph
 [color]
     branch = auto
     diff = auto
@@ -16,7 +17,7 @@
     status = auto
     pager = true
 [format]
-    pretty="%Cgreen%h %Cred%ar(%cd) %Cblue(%cn) %Creset%s"
+    pretty="%Cgreen%h %Cred%ar(%cd) %Cblue(%an) %Creset%s"
 [core]
 	editor = /usr/bin/vim
 	autocrlf = true
