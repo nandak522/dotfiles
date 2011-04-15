@@ -17,7 +17,7 @@
     status = auto
     pager = true
 [format]
-    pretty="%Cgreen%h %Cred%ar(%cd) %Cblue(%an) %Creset%s"
+    pretty="%Cgreen%h %Cred%ar(%cd) %Cblue(%cn) %C(yellow)%d %Creset%s"
 [core]
 	editor = /usr/bin/vim
 	autocrlf = true
