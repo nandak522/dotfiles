@@ -9,6 +9,8 @@
     co = checkout
     br = branch
     lg = log --graph
+    prom = pull --rebase origin master
+    pom = push origin master
 [color]
     branch = auto
     diff = auto
@@ -22,5 +24,7 @@
 	editor = /usr/bin/vim
 	autocrlf = true
     pager = less -FRSX
+    whitespace = fix
 [log]
     date = local
+
