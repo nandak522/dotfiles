@@ -1,8 +1,8 @@
 [user]
-	name = Nanda Kishore
-	email = madhav.bnk@gmail.com
+    name = Nanda Kishore
+    email = madhav.bnk@gmail.com
 [apply]
-	whitespace = fix
+    whitespace = fix
 [alias]
     st = status
     ci = commit
@@ -21,10 +21,11 @@
 [format]
     pretty="%Cgreen%h %Cred%ar(%cd) %Cblue(%cn) %C(yellow)%d %Creset%s"
 [core]
-	editor = /usr/bin/vim
-	autocrlf = true
+    editor = /usr/bin/vim
+    autocrlf = true
     pager = less -FRSX
     whitespace = fix
 [log]
     date = local
-
+[http]
+    sslverify = false
