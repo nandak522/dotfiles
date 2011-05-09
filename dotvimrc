@@ -5,3 +5,12 @@ set expandtab
 set incsearch nohlsearch
 noremap <F4> :set hls!<CR>
 set nu
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd l
+set omnifunc=htmlcomplete#CompleteTags
+set ignorecase
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+map <leader>b :FuzzyFinderBuffer<CR>
+map <leader>f :FufFile<CR>
+map <leader>r :FuzzyFinderMruFile<CR>
+autocmd BufEnter * lcd %:p:h
