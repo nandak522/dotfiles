@@ -14,3 +14,10 @@ map <leader>b :FuzzyFinderBuffer<CR>
 map <leader>f :FufFile<CR>
 map <leader>r :FuzzyFinderMruFile<CR>
 autocmd BufEnter * lcd %:p:h
+set mouse=ni
+set showtabline=2
+map <C-t><up> :tabr<cr>
+map <C-t><down> :tabl<cr>
+map <C-t><left> :tabp<cr>
+map <C-t><right> :tabn<cr>
+
