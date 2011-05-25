@@ -10,6 +10,8 @@ autocmd VimEnter * wincmd l
 set omnifunc=htmlcomplete#CompleteTags
 set ignorecase
 autocmd FileType python set omnifunc=pythoncomplete#Complete
+
+let mapleader="'"
 map <leader>b :FuzzyFinderBuffer<CR>
 map <leader>f :FufFile<CR>
 map <leader>r :FuzzyFinderMruFile<CR>
