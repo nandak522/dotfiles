@@ -7,10 +7,10 @@ noremap <F4> :set hls!<CR>
 set nu
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd l
+autocmd BufEnter * NERDTreeMirror
 set omnifunc=htmlcomplete#CompleteTags
 set ignorecase
 autocmd FileType python set omnifunc=pythoncomplete#Complete
-
 let mapleader="'"
 map <leader>b :FuzzyFinderBuffer<CR>
 map <leader>f :FufFile<CR>
@@ -22,4 +22,3 @@ map <C-t><up> :tabr<cr>
 map <C-t><down> :tabl<cr>
 map <C-t><left> :tabp<cr>
 map <C-t><right> :tabn<cr>
-
