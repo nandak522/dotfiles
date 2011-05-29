@@ -1,3 +1,4 @@
+syn on
 set smartindent
 set tabstop=4
 set shiftwidth=4
@@ -22,3 +23,5 @@ map <C-t><up> :tabr<cr>
 map <C-t><down> :tabl<cr>
 map <C-t><left> :tabp<cr>
 map <C-t><right> :tabn<cr>
+filetype plugin indent on
+highlight SpellBad term=reverse ctermbg=7
