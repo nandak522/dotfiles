@@ -7,25 +7,26 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set incsearch nohlsearch
-noremap <F4> :set hls!<CR>
+set backspace=indent,eol,start
 set nu
+set mouse=ni
+set showtabline=2
+set omnifunc=htmlcomplete#CompleteTags
+set ignorecase
+noremap <F4> :set hls!<CR>
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd l
 autocmd BufEnter * NERDTreeMirror
-set omnifunc=htmlcomplete#CompleteTags
-set ignorecase
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 let mapleader="'"
 map <leader>b :FuzzyFinderBuffer<CR>
 map <leader>f :FufFile<CR>
 map <leader>r :FuzzyFinderMruFile<CR>
 autocmd BufEnter * lcd %:p:h
-set mouse=ni
-set showtabline=2
 map <C-t><up> :tabr<cr>
 map <C-t><down> :tabl<cr>
 map <C-t><left> :tabp<cr>
 map <C-t><right> :tabn<cr>
 map <leader>ct :ConqueTerm bash<CR>
 filetype plugin indent on
-highlight SpellBad term=reverse ctermbg=7
+highlight SpellBad term=reverse ctermbg=4 ctermfg=white
