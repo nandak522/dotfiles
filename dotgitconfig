@@ -8,7 +8,7 @@
     ci = commit
     co = checkout
     br = branch
-    lg = log --graph
+    lg = log --graph --all
     prom = pull --rebase origin master
     pom = push origin master
 [color]
