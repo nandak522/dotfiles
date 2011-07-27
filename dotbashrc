@@ -101,6 +101,7 @@ fi
 alias grep='grep -s --color'
 alias ls='ls --color'
 alias vi='vim'
+export VIRTUALENV_USE_DISTRIBUTE=true
 export COLUMNS=150
 cd ~/workspace
 export VIRTUALENV_USE_DISTRIBUTE=true
