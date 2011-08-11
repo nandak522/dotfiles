@@ -11,6 +11,7 @@
     lg = log --graph --all
     prom = pull --rebase origin master
     pom = push origin master
+    what = whatchanged -p
 [color]
     branch = auto
     diff = auto
