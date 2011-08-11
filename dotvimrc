@@ -1,6 +1,7 @@
 syn on
 set wildmenu
 set autoindent
+set copyindent
 set smartindent
 set textwidth=80
 set tabstop=4
@@ -30,3 +31,16 @@ map <C-t><right> :tabn<cr>
 map <leader>ct :ConqueTerm bash<CR>
 filetype plugin indent on
 highlight SpellBad term=reverse ctermbg=4 ctermfg=white
+set statusline=%<%F\ %m%r%h%w%l,%c
+set nobackup
+set noswapfile
+set paste
+let NERDTreeIgnore=['\.pyc']
+vmap > >gv
+vmap < <gv
+syntax match csvHeading /\%1l\%(\%("\zs\%([^"]\|""\)*\ze"\)\|\%(\zs[^,"]*\ze\)\)/
+highlight def link csvHeading Type
+nnoremap <silent> <F3> :Grep<CR>
+:let Grep_Default_Filelist = '*.py' 
+nnoremap <silent> <F6> :cnewer<CR>
+command -range Re <line1>,<line2>s/^[\ \t]*\n//g
