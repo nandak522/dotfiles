@@ -13,6 +13,8 @@
     prom = pull --rebase origin master
     pom = push origin master
     what = whatchanged -p
+    df = diff --word-diff=color
+    staged = diff --cached
 [color]
     branch = auto
     diff = auto
@@ -23,8 +25,8 @@
 [format]
     pretty="%Cgreen%h %Cred%ar(%cd) %Cblue(%an) %C(yellow)%d %Creset%s"
 [core]
-    editor = /usr/bin/vim
-    autocrlf = true
+    editor = /jnandakishore/userlocal/bin/vim
+    autocrlf = input
     pager = less -FRSX
     whitespace = fix
 [log]

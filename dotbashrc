@@ -100,8 +100,16 @@ fi
 
 alias grep='grep -s --color'
 alias ls='ls --color'
-alias vi='vim'
+alias vim='/jnandakishore/userlocal/bin/vim'
+alias vimdiff='/jnandakishore/userlocal/bin/vimdiff'
+alias vi='/jnandakishore/userlocal/bin/vim'
+alias git='/jnandakishore/git-core/bin/git'
+export SVN_EDITOR='/jnandakishore/userlocal/bin/vim'
+export EDITOR='/jnandakishore/userlocal/bin/vim'
 export VIRTUALENV_USE_DISTRIBUTE=true
+alias virtualenv='/jnandakishore/main_buildout/usr/bin/virtualenv'
+source /jnandakishore/git-1.7.5.4/contrib/completion/git-completion.bash
+source /jnandakishore/pythonbrew_home/.pythonbrew/etc/bashrc
 export COLUMNS=150
 cd ~/workspace
 export VIRTUALENV_USE_DISTRIBUTE=true

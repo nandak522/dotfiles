@@ -41,6 +41,7 @@ vmap < <gv
 syntax match csvHeading /\%1l\%(\%("\zs\%([^"]\|""\)*\ze"\)\|\%(\zs[^,"]*\ze\)\)/
 highlight def link csvHeading Type
 nnoremap <silent> <F3> :Grep<CR>
-:let Grep_Default_Filelist = '*.py' 
+:let Grep_Default_Filelist = '*.py'
 nnoremap <silent> <F6> :cnewer<CR>
 command -range Re <line1>,<line2>s/^[\ \t]*\n//g
+"set scb
