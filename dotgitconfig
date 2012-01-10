@@ -9,7 +9,7 @@
     amend = commit --amend
     co = checkout
     br = branch
-    lg = log --graph
+    lg = log --graph --date=short
     prom = pull --rebase origin master
     pom = push origin master
     what = whatchanged -p
@@ -23,13 +23,11 @@
     status = auto
     pager = true
 [format]
-    pretty="%Cgreen%h %Cred%ar(%cd) %Cblue(%an) %C(yellow)%d %Creset%s"
+    pretty="%Cgreen%h %Cred%cr(%cd) %Cblue(%an) %C(yellow)%d %Creset%s"
 [core]
     editor = /jnandakishore/userlocal/bin/vim
     autocrlf = input
     pager = less -FRSX
     whitespace = fix
-[log]
-    date = local
 [http]
     sslverify = false
