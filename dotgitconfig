@@ -9,12 +9,14 @@
     amend = commit --amend
     co = checkout
     br = branch
-    lg = log --graph --date=short
+    lg = log --graph --date=short --date-order
+    pur = pull --rebase
     prom = pull --rebase origin master
     pom = push origin master
     what = whatchanged -p
-    df = diff --word-diff=color
+    df = diff --color-words
     staged = diff --cached
+    unstage = reset HEAD
 [color]
     branch = auto
     diff = auto
@@ -29,5 +31,9 @@
     autocrlf = input
     pager = less -FRSX
     whitespace = fix
-[http]
-    sslverify = false
+    safecrlf = warn
+    filemode = false
+[diff]
+	mnemonicprefix = true
+[merge]
+	stat = true

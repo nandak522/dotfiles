@@ -1,17 +1,23 @@
+set nocompatible
 syn on
 set wildmenu
 set autoindent
 set copyindent
 set smartindent
-set textwidth=80
+set textwidth=78
+autocmd FileType text setlocal textwidth=78
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set incsearch nohlsearch
+set incsearch
+set nohlsearch
 set backspace=indent,eol,start
 set nu
 set mouse=ni
-set showtabline=2
+"set mouse=a
+"set showtabline=2
+set showmatch
+set smartcase
 set omnifunc=htmlcomplete#CompleteTags
 set ignorecase
 noremap <F4> :set hls!<CR>
@@ -31,7 +37,7 @@ map <C-t><right> :tabn<cr>
 map <leader>ct :ConqueTerm bash<CR>
 filetype plugin indent on
 highlight SpellBad term=reverse ctermbg=4 ctermfg=white
-set statusline=%<%F\ %m%r%h%w%l,%c
+set statusline=%<%F\ %m%r%h%w%l,%c\ \ %P
 set nobackup
 set noswapfile
 set paste
@@ -41,7 +47,40 @@ vmap < <gv
 syntax match csvHeading /\%1l\%(\%("\zs\%([^"]\|""\)*\ze"\)\|\%(\zs[^,"]*\ze\)\)/
 highlight def link csvHeading Type
 nnoremap <silent> <F3> :Grep<CR>
-:let Grep_Default_Filelist = '*.py'
+let Grep_Default_Filelist = '*.py'
 nnoremap <silent> <F6> :cnewer<CR>
 command -range Re <line1>,<line2>s/^[\ \t]*\n//g
-"set scb
+"set scb  " show scroll binding
+set t_Co=16
+set background=light
+let g:solarized_termcolors = 16
+let g:solarized_visibility = 'high'
+let g:solarized_contrast = 'high'
+colorscheme solarized
+let g:NERDTreeWinSize = 20
+let g:NERDTreeMinimalUI = 1
+"highlight OverLength ctermbg=white ctermfg=black guibg=#592929
+"match OverLength /\%81v.\+/
+set path+=/jnandakishore/interface/jiva_interfaces_v52/src/*
+"set list
+"set listchars=tab:>.,trail:.,extends:#,nbsp:.
+set cursorline
+" Handle TERM quirks in vim
+if $TERM =~ '^screen-256color'
+    nmap <Esc>OH <Home>
+    imap <Esc>OH <Home>
+    nmap <Esc>OF <End>
+    imap <Esc>OF <End>
+endif
+"set mouse=a
+set ttymouse=xterm
+let g:xml_syntax_folding=1
+au FileType xml setlocal foldmethod=syntax
+"au FileType python setlocal foldmethod=indent
+map <F3>  :cprev<CR>
+map <F4>  :cnext<CR>
+map <F5>  :set foldmethod=indent<CR>
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
