@@ -1,86 +1,83 @@
-set nocompatible
-syn on
-set wildmenu
-set autoindent
-set copyindent
-set smartindent
-set textwidth=78
-autocmd FileType text setlocal textwidth=78
+syntax enable       "Enable syntax hl
+set showmatch       "Show matching bracets when text indicator is over them
+set ruler           "Always show current position
+filetype plugin indent on
+
+"--- Text, tab and ident related ------------
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set incsearch
-set nohlsearch
+set textwidth=80
+set autoindent
+set copyindent
+set smartindent
 set backspace=indent,eol,start
+let mapleader="'"
+
+"--- Vim UI related -------------
+set colorcolumn=80 " Mark 80th column with a red line
+set wildmenu
+set cmdheight=1
 set nu
 set mouse=ni
-"set mouse=a
-"set showtabline=2
-set showmatch
-set smartcase
-set omnifunc=htmlcomplete#CompleteTags
-set ignorecase
+set showtabline=2
+nnoremap <silent> <F6> :cnewer<CR>
+set statusline=%<%F\ %m%r%h%w%l,%c
+vmap > >gv
+vmap < <gv
+highlight def link csvHeading Type
+syntax match csvHeading /\%1l\%(\%("\zs\%([^"]\|""\)*\ze"\)\|\%(\zs[^,"]*\ze\)\)/
 noremap <F4> :set hls!<CR>
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd l
-autocmd BufEnter * NERDTreeMirror
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-let mapleader="'"
-map <leader>b :FuzzyFinderBuffer<CR>
-map <leader>f :FufFile<CR>
-map <leader>r :FuzzyFinderMruFile<CR>
-autocmd BufEnter * lcd %:p:h
+set paste
+
+"--- Tabs related ---------------
 map <C-t><up> :tabr<cr>
 map <C-t><down> :tabl<cr>
 map <C-t><left> :tabp<cr>
 map <C-t><right> :tabn<cr>
-map <leader>ct :ConqueTerm bash<CR>
-filetype plugin indent on
-highlight SpellBad term=reverse ctermbg=4 ctermfg=white
-set statusline=%<%F\ %m%r%h%w%l,%c\ \ %P
-set nobackup
-set noswapfile
-set paste
+"set scb
+
+"--- search options ------------
+set incsearch       " show 'best match so far' as you type
+set nohlsearch      " hilight the items found by the search
+set ignorecase      " ignores case of letters on searches
+set smartcase       " Override the 'ignorecase' option if the search pattern contains upper case characters
+
+"--- NERDTree related --------
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd l
+autocmd BufEnter * NERDTreeMirror
 let NERDTreeIgnore=['\.pyc']
-vmap > >gv
-vmap < <gv
-syntax match csvHeading /\%1l\%(\%("\zs\%([^"]\|""\)*\ze"\)\|\%(\zs[^,"]*\ze\)\)/
-highlight def link csvHeading Type
-nnoremap <silent> <F3> :Grep<CR>
-let Grep_Default_Filelist = '*.py'
-nnoremap <silent> <F6> :cnewer<CR>
-command -range Re <line1>,<line2>s/^[\ \t]*\n//g
-"set scb  " show scroll binding
-set t_Co=16
-set background=light
-let g:solarized_termcolors = 16
-let g:solarized_visibility = 'high'
-let g:solarized_contrast = 'high'
-colorscheme solarized
-let g:NERDTreeWinSize = 20
-let g:NERDTreeMinimalUI = 1
-"highlight OverLength ctermbg=white ctermfg=black guibg=#592929
-"match OverLength /\%81v.\+/
-set path+=/jnandakishore/interface/jiva_interfaces_v52/src/*
-"set list
-"set listchars=tab:>.,trail:.,extends:#,nbsp:.
-set cursorline
-" Handle TERM quirks in vim
-if $TERM =~ '^screen-256color'
-    nmap <Esc>OH <Home>
-    imap <Esc>OH <Home>
-    nmap <Esc>OF <End>
-    imap <Esc>OF <End>
-endif
-"set mouse=a
-set ttymouse=xterm
-let g:xml_syntax_folding=1
+
+"--- Enable omni completion.
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown,ctp set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+
+" FuzzFinder Shorcuts. Using F2 for opening FuzzyFinderTextMate
+map <leader>f :FufFileWithCurrentBufferDir<CR>
+map <leader>m :FufFileWithFullCwd<CR>
+map <leader>b :FufBuffer<CR>
+
+" Set default environment based on current edited files
+autocmd BufEnter * silent! lcd %:p:h
+highlight SpellBad term=reverse ctermbg=4 ctermfg=white
+
+"--- ConqueTerm related ----
+map <leader>ct :ConqueTerm bash<CR>
+
+" Turn backup off, since most stuff is in git anyway...
+set nobackup
+set nowb
+set noswapfile
+
+" --- Folds ------
 au FileType xml setlocal foldmethod=syntax
-"au FileType python setlocal foldmethod=indent
-map <F3>  :cprev<CR>
-map <F4>  :cnext<CR>
-map <F5>  :set foldmethod=indent<CR>
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1
+au FileType python setlocal foldmethod=indent
+
+"remove trailing whitespace
+"http://vim.wikia.com/wiki/Remove_unwanted_spaces#Automatically_removing_all_trailing_whitespace
+autocmd BufWritePre *.py :%s/\s\+$//e
+autocmd BufWritePre *.html :%s/\s\+$//e
