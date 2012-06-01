@@ -1,7 +1,9 @@
+set nocompatible
 syntax enable       "Enable syntax hl
 set showmatch       "Show matching bracets when text indicator is over them
 set ruler           "Always show current position
 filetype plugin indent on
+set autochdir       "Always switch to the current file directory
 
 "--- Text, tab and ident related ------------
 set tabstop=4
@@ -16,6 +18,7 @@ let mapleader="'"
 
 "--- Vim UI related -------------
 set colorcolumn=80 " Mark 80th column with a red line
+highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
 set wildmenu
 set cmdheight=1
 set nu
@@ -48,6 +51,8 @@ autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd l
 autocmd BufEnter * NERDTreeMirror
 let NERDTreeIgnore=['\.pyc']
+"let NERDTreeWinSize=20
+let NERDTreeMinimalUI=1
 
 "--- Enable omni completion.
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
@@ -81,3 +86,25 @@ au FileType python setlocal foldmethod=indent
 "http://vim.wikia.com/wiki/Remove_unwanted_spaces#Automatically_removing_all_trailing_whitespace
 autocmd BufWritePre *.py :%s/\s\+$//e
 autocmd BufWritePre *.html :%s/\s\+$//e
+
+"Aliases for common vim typos
+command! -bang E e<bang>
+command! -bang Q q<bang>
+command! -bang W w<bang>
+command! -bang QA qa<bang>
+command! -bang Qa qa<bang>
+command! -bang Wa wa<bang>
+command! -bang WA wa<bang>
+command! -bang Wq wq<bang>
+command! -bang WQ wq<bang>
+
+"--- Solarized ---
+"set background=light
+"let g:solarized_termcolors = 16
+"let g:solarized_visibility = 'high'
+"let g:solarized_contrast = 'high'
+"colorscheme solarized
+
+"--- Cycling through Pyflakes errors ---
+map <F3>  :cprev<CR>
+map <F4>  :cnext<CR>

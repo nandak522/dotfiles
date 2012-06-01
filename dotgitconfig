@@ -15,6 +15,7 @@
     pom = push origin master
     what = whatchanged -p
     df = diff --color-words
+    di = diff --ignore-space-change
     staged = diff --cached
     unstage = reset HEAD
 [color]
@@ -22,10 +23,9 @@
     diff = auto
     interactive = auto
     ui = always
-    status = auto
     pager = true
 [format]
-    pretty="%Cgreen%h %Cred%cr(%cd) %Cblue(%an) %C(yellow)%d %Creset%s"
+    pretty="%Cgreen%h %Cred%ar(%ad) %Cblue(%an) %C(yellow)%d %Creset%s"
 [core]
     editor = /jnandakishore/userlocal/bin/vim
     autocrlf = input
@@ -35,5 +35,6 @@
     filemode = false
 [diff]
 	mnemonicprefix = true
+	renames = copies
 [merge]
 	stat = true
