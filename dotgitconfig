@@ -18,12 +18,18 @@
     di = diff --ignore-space-change
     staged = diff --cached
     unstage = reset HEAD
+    credits = shortlog -sn --no-merges
+    changelog = log --pretty=oneline --abbrev-commit --graph
 [color]
     branch = auto
     diff = auto
     interactive = auto
     ui = always
     pager = true
+[color "status"]
+    untracked = black
+    changed = red
+    added = green
 [format]
     pretty="%Cgreen%h %Cred%ar(%ad) %Cblue(%an) %C(yellow)%d %Creset%s"
 [core]
@@ -38,3 +44,6 @@
 	renames = copies
 [merge]
 	stat = true
+	verbosity = 1
+	summary = true
+	log = true
