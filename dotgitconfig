@@ -31,7 +31,7 @@
     changed = red
     added = green
 [format]
-    pretty="%Cgreen%h %Cred%ar(%ad) %Cblue(%an) %C(yellow)%d %Creset%s"
+    pretty="%Cgreen%h %Cred%ar %Cblue<%an> %C(yellow)%d %Creset%s %Cred(%ad)"
 [core]
     editor = /jnandakishore/userlocal/bin/vim
     autocrlf = input
