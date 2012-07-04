@@ -9,6 +9,7 @@
     amend = commit --amend
     co = checkout
     br = branch
+    ap = add -p
     lg = log --graph --date=short --date-order
     pur = pull --rebase
     prom = pull --rebase origin master
@@ -31,7 +32,8 @@
     changed = red
     added = green
 [format]
-    pretty="%Cgreen%h %Cred%ar %Cblue<%an> %C(yellow)%d %Creset%s %Cred(%ad)"
+#    pretty="%Cgreen%h %Cred%ar %C(yellow)%d %Creset%s %Cblue<%an> %Cred(%ad)"
+    pretty="%Cgreen%h %Cred%ar %C(yellow)%d %Creset%s %Cblue<%an>"
 [core]
     editor = /jnandakishore/userlocal/bin/vim
     autocrlf = input
@@ -47,3 +49,7 @@
 	verbosity = 1
 	summary = true
 	log = true
+[url "git@github.com:"]
+    insteadOf = gh:
+[url "git@github.com:none-da/"]
+    insteadOf = none-da:
