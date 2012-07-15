@@ -2,14 +2,14 @@
     name = Nanda Kishore
     email = madhav.bnk@gmail.com
 [apply]
-    whitespace = fix
+    whitespace = warn
 [alias]
     st = status
     ci = commit
     amend = commit --amend
     co = checkout
     br = branch
-    ap = add -p
+    pick = add -p
     lg = log --graph --date=short --date-order
     pur = pull --rebase
     prom = pull --rebase origin master
@@ -21,6 +21,8 @@
     unstage = reset HEAD
     credits = shortlog -sn --no-merges
     changelog = log --pretty=oneline --abbrev-commit --graph
+    cherry = cherr-pick
+    throw = checkout -p
 [color]
     branch = auto
     diff = auto
@@ -33,12 +35,12 @@
     added = green
 [format]
 #    pretty="%Cgreen%h %Cred%ar %C(yellow)%d %Creset%s %Cblue<%an> %Cred(%ad)"
-    pretty="%Cgreen%h %Cred%ar %C(yellow)%d %Creset%s %Cblue<%an>"
+    pretty="%Cgreen%h %Cred%ar(%ad) %C(yellow)%d %Creset%s %Cblue<%an>"
 [core]
     editor = /jnandakishore/userlocal/bin/vim
     autocrlf = input
     pager = less -FRSX
-    whitespace = fix
+    whitespace = warn
     safecrlf = warn
     filemode = false
 [diff]
@@ -53,3 +55,5 @@
     insteadOf = gh:
 [url "git@github.com:none-da/"]
     insteadOf = none-da:
+[http]
+    sslverify = false
