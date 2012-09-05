@@ -47,12 +47,16 @@ set ignorecase      " ignores case of letters on searches
 set smartcase       " Override the 'ignorecase' option if the search pattern contains upper case characters
 
 "--- NERDTree related --------
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd l
-autocmd BufEnter * NERDTreeMirror
+autocmd VimEnter * NERDTree | wincmd l "open NERDTree automatically when vim starts up
+autocmd VimEnter * nmap <F3> :NERDTreeToggle <bar> set nonu<CR>
+"autocmd BufEnter * NERDTreeMirror "open NERDTree automatically in every tab
 let NERDTreeIgnore=['\.pyc']
-"let NERDTreeWinSize=20
+let NERDTreeWinSize=20
 let NERDTreeMinimalUI=1
+let g:nerdtree_tabs_focus_on_files=1
+
+"--- NERDTreeTabs: https://github.com/jistr/vim-nerdtree-tabs related ----
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 "--- Enable omni completion.
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
@@ -80,7 +84,7 @@ set noswapfile
 
 " --- Folds ------
 au FileType xml setlocal foldmethod=syntax
-au FileType python setlocal foldmethod=indent
+"au FileType python setlocal foldmethod=indent
 
 "remove trailing whitespace
 "http://vim.wikia.com/wiki/Remove_unwanted_spaces#Automatically_removing_all_trailing_whitespace
@@ -103,8 +107,4 @@ command! -bang WQ wq<bang>
 "let g:solarized_termcolors = 16
 "let g:solarized_visibility = 'high'
 "let g:solarized_contrast = 'high'
-"colorscheme solarized
-
-"--- Cycling through Pyflakes errors ---
-map <F3>  :cprev<CR>
-map <F4>  :cnext<CR>
+"colorscheme solarized 
