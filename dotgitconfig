@@ -23,6 +23,7 @@
     changelog = log --pretty=oneline --abbrev-commit --graph
     cherry = cherr-pick
     throw = checkout -p
+    goback = reset --hard
 [color]
     branch = auto
     diff = auto
@@ -35,7 +36,7 @@
     added = green
 [format]
 #    pretty="%Cgreen%h %Cred%ar %C(yellow)%d %Creset%s %Cblue<%an> %Cred(%ad)"
-    pretty="%Cgreen%h %Cred%ar(%ad) %C(yellow)%d %Creset%s %Cblue<%an>"
+    pretty="%Cgreen%h %Cred%ar(%ad) %Cblue<%an> %C(yellow)%d %Creset%s"
 [core]
     editor = /jnandakishore/userlocal/bin/vim
     autocrlf = input
@@ -57,3 +58,5 @@
     insteadOf = none-da:
 [http]
     sslverify = false
+[push]
+	default = tracking
