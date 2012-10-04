@@ -10,6 +10,7 @@
     co = checkout
     br = branch
     pick = add -p
+    pull = pull --verbose
     lg = log --graph --date=short --date-order
     pur = pull --rebase
     prom = pull --rebase origin master
@@ -24,6 +25,8 @@
     cherry = cherr-pick
     throw = checkout -p
     goback = reset --hard
+[blame]
+    date=short
 [color]
     branch = auto
     diff = auto
