@@ -3,7 +3,9 @@ syntax enable       "Enable syntax hl
 set showmatch       "Show matching bracets when text indicator is over them
 set ruler           "Always show current position
 filetype plugin indent on
-set autochdir       "Always switch to the current file directory
+"au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
+set autochdir       "Always switch to the current file directory 
+set list
 
 "--- Text, tab and ident related ------------
 set tabstop=4
@@ -63,7 +65,7 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown,ctp set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+"autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 
 " FuzzFinder Shorcuts. Using F2 for opening FuzzyFinderTextMate
 map <leader>f :FufFileWithCurrentBufferDir<CR>
@@ -83,7 +85,7 @@ set nowb
 set noswapfile
 
 " --- Folds ------
-au FileType xml setlocal foldmethod=syntax
+"au FileType xml setlocal foldmethod=syntax
 "au FileType python setlocal foldmethod=indent
 
 "remove trailing whitespace
@@ -108,3 +110,4 @@ command! -bang WQ wq<bang>
 "let g:solarized_visibility = 'high'
 "let g:solarized_contrast = 'high'
 "colorscheme solarized 
+set nobomb
