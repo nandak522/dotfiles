@@ -12,6 +12,7 @@
     pick = add -p
     pull = pull --verbose
     lg = log --graph --date=short --date-order
+    lt = log --graph --date=short --date-order -n 100
     pur = pull --rebase
     prom = pull --rebase origin master
     pom = push origin master
@@ -24,6 +25,7 @@
     changelog = log --pretty=oneline --abbrev-commit --graph
     cherry = cherr-pick
     throw = checkout -p
+    discard = checkout -p
     goback = reset --hard
 [blame]
     date=short
@@ -48,18 +50,18 @@
     safecrlf = warn
     filemode = false
 [diff]
-	mnemonicprefix = true
-	renames = copies
+    mnemonicprefix = true
+    renames = copies
 [merge]
-	stat = true
-	verbosity = 1
-	summary = true
-	log = true
-[url "git@github.com:"]
+    stat = true
+    verbosity = 1
+    summary = true
+    log = true
+[url "git@github.com:"]	
     insteadOf = gh:
 [url "git@github.com:none-da/"]
     insteadOf = none-da:
 [http]
     sslverify = false
 [push]
-	default = tracking
+    default = tracking
