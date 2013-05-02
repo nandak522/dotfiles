@@ -2,6 +2,7 @@
     "bold_folder_labels": true,
     "color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
     "default_encoding": "UTF-8",
+    "ensure_newline_at_eof_on_save": true,
     "file_exclude_patterns":
     [
         ".DS_Store",
@@ -65,6 +66,10 @@
     "theme": "Soda Light.sublime-theme",
     "translate_tabs_to_spaces": true,
     "trim_trailing_white_space_on_save": true,
-    "ensure_newline_at_eof_on_save": true,
-    "overlay_scroll_bars": "enabled"
+    "draw_minimap_border": true,
+    "scroll_past_end": false,
+    "auto_complete_delay": 50,
+    "close_windows_when_empty": true,
+    "line_padding_bottom": 1,
+    "fade_fold_buttons": false
 }
