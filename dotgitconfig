@@ -12,7 +12,7 @@
     pick = add -p
     pull = pull --verbose
     lg = log --graph --date=short --date-order
-    lt = log --graph --date=short --date-order -n 100
+    lt = log --graph --date=short --topo-order
     pur = pull --rebase
     prom = pull --rebase origin master
     pom = push origin master
@@ -64,4 +64,4 @@
 [http]
     sslverify = false
 [push]
-    default = tracking
+	default = simple
