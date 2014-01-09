@@ -6,7 +6,7 @@
 [alias]
     st = status
     ci = commit
-    amend = commit --amend
+    amd = commit --amend
     co = checkout
     br = branch
     pick = add -p
