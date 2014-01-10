@@ -10,7 +10,7 @@
     co = checkout
     br = branch
     pick = add -p
-    pull = pull --verbose
+    pl = pull --verbose
     lg = log --graph --date=short --date-order
     lt = log --graph --date=short --topo-order
     pur = pull --rebase
