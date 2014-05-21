@@ -20,7 +20,7 @@
     df = diff --color-words
     di = diff --ignore-space-change
     sg = diff --cached
-    unstage = reset HEAD
+    usg = reset HEAD
     credits = shortlog -sn --no-merges
     changelog = log --pretty=oneline --abbrev-commit --graph
     cherry = cherr-pick
