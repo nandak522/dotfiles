@@ -19,7 +19,7 @@
     what = whatchanged -p
     df = diff --color-words
     di = diff --ignore-space-change
-    staged = diff --cached
+    sg = diff --cached
     unstage = reset HEAD
     credits = shortlog -sn --no-merges
     changelog = log --pretty=oneline --abbrev-commit --graph
