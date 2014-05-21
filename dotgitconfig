@@ -9,7 +9,7 @@
     ad = commit --amend
     co = checkout
     br = branch
-    pick = add -p
+    pk = add -p
     pl = pull --verbose
     lg = log --graph --date=short --date-order
     lt = log --graph --date=short --topo-order
