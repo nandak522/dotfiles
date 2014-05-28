@@ -13,6 +13,9 @@
     pl = pull --verbose
     lg = log --graph --date=short --date-order
     lt = log --graph --date=short --topo-order
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    ld = log --pretty=format:"%C(yellow)%h\\ %C(green)%ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --graph
+    ls = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
     pur = pull --rebase
     prom = pull --rebase origin master
     pom = push origin master
@@ -29,6 +32,8 @@
     goback = reset --hard
 [blame]
     date=short
+[core]
+    excludesfile = ~/.gitignore
 [color]
     branch = auto
     diff = auto
