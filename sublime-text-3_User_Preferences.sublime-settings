@@ -1,87 +1,85 @@
 {
-    "always_show_minimap_viewport": true,
-    "auto_complete_delay": 50,
-    "bold_folder_labels": true,
-    "close_windows_when_empty": true,
-    "color_scheme": "Packages/User/Espresso Soda.tmTheme",
-    "default_encoding": "UTF-8",
-    "draw_minimap_border": true,
-    "ensure_newline_at_eof_on_save": true,
-    "fade_fold_buttons": true,
-    "file_exclude_patterns":
-    [
-        ".DS_Store",
-        ".tags*",
-        "*.pyc",
-        "*.pyo",
-        "*.exe",
-        "*.dll",
-        "*.obj",
-        "*.o",
-        "*.a",
-        "*.lib",
-        "*.so",
-        "*.dylib",
-        "*.ncb",
-        "*.sdf",
-        "*.suo",
-        "*.pdb",
-        "*.idb",
-        "*.class",
-        "*.psd",
-        ".installed.cfg",
-        ".gitignore"
-    ],
-    "flatland_sidebar_tree_large": true,
-    "folder_exclude_patterns":
-    [
-        "data",
-        ".git",
-        ".svn",
-        ".hg",
-        "CVS",
-        ".sass-cache",
-        ".bundle",
-        "bundle",
-        ".rbx",
-        "script",
-        "tmp",
-        "build",
-        ".metadata",
-        "eggs",
-        "parts",
-        "downloads",
-        "develop-eggs",
-        "*.egg-info",
-        "include",
-        ".gradle"
-    ],
-    "font_face": "UbuntuMono",
-    "font_options":
-    [
-        "subpixel_antialias"
-    ],
-    "font_size": 13,
-    "highlight_line": true,
-    "highlight_modified_tabs": true,
-    "ignored_packages":
-    [
-        "Markdown",
-        "SublimePythonIDE"
-    ],
-    "indent_to_bracket": true,
-    "line_padding_bottom": 1,
-    "open_files_in_new_window": false,
-    "rulers":
-    [
-        79
-    ],
-    "scroll_past_end": false,
-    "soda_folder_icons": true,
-    "tab_size": 4,
-    "theme": "Soda Light 3.sublime-theme",
-    "translate_tabs_to_spaces": true,
-    "trim_trailing_white_space_on_save": true,
-    "use_simple_full_screen": true
+	"always_show_minimap_viewport": true,
+	"bold_folder_labels": true,
+	"close_windows_when_empty": true,
+	"color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
+	"detect_slow_plugins": true,
+	"draw_minimap_border": true,
+	"ensure_newline_at_eof_on_save": true,
+	"fade_fold_buttons": true,
+	"file_exclude_patterns":
+	[
+		".DS_Store",
+		".tags*",
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		"*.class",
+		"*.psd",
+		".installed.cfg",
+		".gitignore"
+	],
+	"folder_exclude_patterns":
+	[
+		"data",
+		".git",
+		".svn",
+		".hg",
+		"CVS",
+		".sass-cache",
+		".bundle",
+		"bundle",
+		".rbx",
+		"script",
+		"tmp",
+		"build",
+		".metadata",
+		"eggs",
+		"parts",
+		"downloads",
+		"develop-eggs",
+		"*.egg-info",
+		"include",
+		".gradle"
+	],
+	"font_face": "Droid Sans Mono",
+	"font_options":
+	[
+		"subpixel_antialias"
+	],
+	"font_size": 11,
+	"git_binary": "/jnandakishore/userlocal/bin/git",
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"indent_to_bracket": true,
+	"line_padding_bottom": 1,
+	"lint_mode": "background",
+	"open_files_in_new_window": false,
+	"rulers":
+	[
+		79
+	],
+	"scroll_past_end": false,
+	"soda_classic_tabs": true,
+	"tab_size": 4,
+	"theme": "Spacegray.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"use_simple_full_screen": true
 }
-
