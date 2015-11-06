@@ -7,6 +7,7 @@
     st = status
     ci = commit
     amd = commit --amend
+    uncommit = reset HEAD^
     co = checkout
     br = branch
     pick = add -p
@@ -23,10 +24,13 @@
     unstage = reset HEAD
     credits = shortlog -sn --no-merges
     changelog = log --pretty=oneline --abbrev-commit --graph
+    rlog = reflog --pretty=reflog
     cherry = cherry-pick
     throw = checkout -p
-    discard = checkout -p
+    dis = checkout -p
     goback = reset --hard
+    ignore = update-index --assume-unchanged
+    unignore = update-index --no-assume-unchanged
 [blame]
     date=short
 [color]
@@ -42,13 +46,15 @@
 [format]
 #    pretty="%Cgreen%h %Cred%ar %C(yellow)%d %Creset%s %Cblue<%an> %Cred(%ad)"
     pretty="%Cgreen%h %Cred%ar(%ad) %Cblue<%an> %C(yellow)%d %Creset%s"
+[pretty]
+    reflog="%Cgreen%h %Cred%ar(%ad) %Cblue<%an> %C(yellow)%d %Creset%s"
 [core]
     editor = vim
     autocrlf = input
     pager = less -FRSX
     whitespace = warn
     safecrlf = warn
-    filemode = false
+    fileMode = false
 [diff]
     mnemonicprefix = true
     renames = copies
@@ -65,3 +71,7 @@
     sslverify = false
 [push]
 	default = simple
+[rebase]
+    stat = true
+    autoStash = true
+    missingCommitsCheck = warn
