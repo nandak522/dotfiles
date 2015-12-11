@@ -20,6 +20,7 @@
     what = whatchanged -p
     df = diff --color-words
     di = diff --ignore-space-change
+    dt = difftool
     staged = diff --cached
     unstage = reset HEAD
     credits = shortlog -sn --no-merges
@@ -58,11 +59,14 @@
 [diff]
     mnemonicprefix = true
     renames = copies
+	tool = meld
 [merge]
     stat = true
     verbosity = 1
     summary = true
     log = true
+    conflictstyle = diff3
+    strategy = patience
 [url "git@github.com:"]	
     insteadOf = gh:
 [url "git@github.com:none-da/"]
@@ -75,3 +79,6 @@
     stat = true
     autoStash = true
     missingCommitsCheck = warn
+
+[difftool]
+	prompt = false
