@@ -1,0 +1,111 @@
+"*":
+  "atom-ternjs":
+    lint: false
+  "autocomplete-plus":
+    enableBuiltinProvider: false
+    minimumWordLength: 2
+  "autocomplete-python":
+    addBracketAfterFunction: true
+    addDotAfterModule: true
+    extraPaths: "$PROJECT/usr/lib/python2.7/site-packages"
+    fuzzyMatcher: true
+    pythonPath: "$PROJECT/usr/bin/python"
+    useSnippets: "all"
+  core:
+    autoHideMenuBar: true
+    disabledPackages: [
+      "grammar-selector"
+      "language-c"
+      "language-clojure"
+      "language-coffee-script"
+      "language-csharp"
+      "language-java"
+      "language-less"
+      "language-make"
+      "language-mustache"
+      "language-objective-c"
+      "language-perl"
+      "language-php"
+      "language-ruby-on-rails"
+      "language-sass"
+      "language-toml"
+      "language-yaml"
+      "metrics"
+      "archive-view"
+      "background-tips"
+      "bookmarks"
+      "dev-live-reload"
+      "encoding-selector"
+      "image-view"
+      "language-property-list"
+      "link"
+      "open-on-github"
+      "package-generator"
+      "spell-check"
+      "autocomplete-atom-api"
+      "deprecation-cop"
+      "exception-reporting"
+      "language-go"
+      "language-hyperlink"
+      "language-source"
+      "styleguide"
+      "welcome"
+      "autosave"
+      "keybinding-resolver"
+      "linter-jshint"
+    ]
+    excludeVcsIgnoredPaths: false
+    ignoredNames: [
+      "*.pyc"
+      ".git"
+      "*egg*"
+      "usr"
+    ]
+    packagesWithKeymapsDisabled: [
+      "linter"
+    ]
+  editor:
+    fontFamily: "Ubuntu Mono"
+    fontSize: 17
+    invisibles: {}
+    lineHeight: 1.4
+    preferredLineLength: 79
+    showIndentGuide: true
+    showInvisibles: true
+    tabLength: 4
+  "exception-reporting":
+    userId: "67e0f649-e5f1-f74f-1d34-08626e257434"
+  "git-diff": {}
+  "git-log": {}
+  linter:
+    showErrorPanel: false
+    showErrorTabFile: false
+    showErrorTabProject: false
+    statusIconScope: "File"
+  "linter-jshint":
+    disableWhenNoJshintrcFileInPath: true
+    jshintExecutablePath: "/jnandakishore/userlocal/lib/node_modules/jshint/bin/jshint"
+  "linter-pylama":
+    ignoreErrorsAndWarnings: "E501,D101,D103"
+    pylamaVersion: "internal"
+  "merge-conflicts":
+    gitPath: "/jnandakishore/userlocal/bin/git"
+  minimap: {}
+  "one-dark-ui":
+    layoutMode: "Compact"
+  "one-light-ui":
+    layoutMode: "Compact"
+  pigments: {}
+  "status-bar": {}
+  "tree-view":
+    hideIgnoredNames: true
+    sortFoldersBeforeFiles: false
+  welcome:
+    showOnStartup: false
+".angular.html.text":
+  editor:
+    preferredLineLength: 79
+    tabLength: 2
+".ini.source":
+  editor:
+    preferredLineLength: 79
