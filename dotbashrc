@@ -100,18 +100,18 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+export USERLOCAL=/jnandakishore/userlocal
+export PATH=$USERLOCAL/bin:$PATH
+export LD_LIBRARY_PATH=$USERLOCAL/lib:/usr/lib:/usr/local/lib:$LD_LIBRARY_PATH
 alias grep='grep -s --color'
 alias ls='ls --color'
-alias vim='/jnandakishore/userlocal/bin/vim'
-alias vimdiff='/jnandakishore/userlocal/bin/vimdiff'
-alias vi='/jnandakishore/userlocal/bin/vim'
-alias git='/jnandakishore/git-core/bin/git'
-export SVN_EDITOR='/jnandakishore/userlocal/bin/vim'
-export EDITOR='/jnandakishore/userlocal/bin/vim'
-export VIRTUALENV_USE_DISTRIBUTE=true
-alias virtualenv='/jnandakishore/main_buildout/usr/bin/virtualenv'
-source /jnandakishore/git-1.7.5.4/contrib/completion/git-completion.bash
-source /jnandakishore/pythonbrew_home/.pythonbrew/etc/bashrc
+#source /jnandakishore/softwares/git-2.7.0/contrib/completion/git-completion.bash
+#source /jnandakishore/softwares/git-2.7.0/contrib/completion/git-prompt.sh
+GIT_PS1_SHOWCOLORHINTS=1
+PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
 export COLUMNS=150
-cd ~/workspace
-export VIRTUALENV_USE_DISTRIBUTE=true
+alias cmmi='./configure --prefix=$USERLOCAL && make && make install'
+decode () {
+  echo "$1" | python -c "import base64;print base64.b32decode('$1')"
+}
+alias sift='sift -n'
