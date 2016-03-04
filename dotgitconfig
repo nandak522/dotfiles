@@ -16,6 +16,8 @@
     lt = log --graph --date=short --topo-order
     pur = pull --rebase
     prom = pull --rebase origin master
+    rc = rebase --continue
+    ra = rebase --abort
     pom = push origin master
     what = whatchanged -p
     df = diff --color-words
