@@ -105,13 +105,16 @@ export PATH=$USERLOCAL/bin:$PATH
 export LD_LIBRARY_PATH=$USERLOCAL/lib:/usr/lib:/usr/local/lib:$LD_LIBRARY_PATH
 alias grep='grep -s --color'
 alias ls='ls --color'
+alias upd='sudo apt-get update'
+alias upg='sudo apt-get upgrade'
+alias sift='sift -n'
 #source /jnandakishore/softwares/git-2.7.0/contrib/completion/git-completion.bash
 #source /jnandakishore/softwares/git-2.7.0/contrib/completion/git-prompt.sh
 GIT_PS1_SHOWCOLORHINTS=1
 PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
 export COLUMNS=150
 alias cmmi='./configure --prefix=$USERLOCAL && make && make install'
+alias installgit='./configure --prefix=$USERLOCAL && make doc && make install install-doc'
 decode () {
   echo "$1" | python -c "import base64;print base64.b32decode('$1')"
 }
-alias sift='sift -n'
