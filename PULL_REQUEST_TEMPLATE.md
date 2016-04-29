@@ -22,4 +22,4 @@
 
 
 #### Related Jira Tickets
-[Ticket #](Ticket URL)
+* [Ticket #](Ticket URL)
