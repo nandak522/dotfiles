@@ -61,7 +61,7 @@
 [diff]
     mnemonicprefix = true
     renames = copies
-	tool = meld
+    tool = meld
 [merge]
     stat = true
     verbosity = 1
@@ -76,11 +76,10 @@
 [http]
     sslverify = false
 [push]
-	default = simple
+    default = simple
 [rebase]
     stat = true
     autoStash = true
     missingCommitsCheck = warn
-
 [difftool]
-	prompt = false
+    prompt = false
