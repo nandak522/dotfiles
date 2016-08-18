@@ -1,4 +1,11 @@
 "*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "b661d751-570c-4754-a8fd-d6db80a44c28"
+  "atom-ctags":
+    buildTimeout: 50000
+    cmdArgs: "--exclude=$PROJECT/bin --exclude=$PROJECT/docs --exclude=$PROJECT/logs --exclude=$PROJECT/lua --exclude=*.js --exclude=*.css --exclude=*.less"
+    disableComplete: true
   "atom-ternjs":
     lint: false
   "autocomplete-plus":
@@ -7,9 +14,9 @@
   "autocomplete-python":
     addBracketAfterFunction: true
     addDotAfterModule: true
-    extraPaths: "$PROJECT/usr/lib/python2.7/site-packages"
+    extraPaths: "$PROJECT_VENV/lib/python2.7/site-packages"
     fuzzyMatcher: true
-    pythonPath: "$PROJECT/usr/bin/python"
+    pythonPath: "$PROJECT_VENV/bin/python"
     useSnippets: "all"
   core:
     autoHideMenuBar: true
@@ -19,7 +26,6 @@
       "language-clojure"
       "language-coffee-script"
       "language-csharp"
-      "language-java"
       "language-less"
       "language-make"
       "language-mustache"
@@ -52,7 +58,10 @@
       "welcome"
       "autosave"
       "keybinding-resolver"
-      "linter-jshint"
+      "symbols-view"
+      "linter-pydocstyle"
+      "language-lua"
+      "language-thrift"
     ]
     excludeVcsIgnoredPaths: false
     ignoredNames: [
@@ -65,16 +74,17 @@
       "linter"
     ]
   editor:
-    fontFamily: "Ubuntu Mono"
-    fontSize: 17
+    fontFamily: "Fira Code"
+    fontSize: 16
     invisibles: {}
     lineHeight: 1.4
     preferredLineLength: 79
     showIndentGuide: true
     showInvisibles: true
+    softWrapAtPreferredLineLength: true
     tabLength: 4
   "exception-reporting":
-    userId: "67e0f649-e5f1-f74f-1d34-08626e257434"
+    userId: "39893c6b-47ce-3f23-c6cb-fe982c002e0b"
   "git-diff": {}
   "git-log": {}
   linter:
@@ -82,14 +92,12 @@
     showErrorTabFile: false
     showErrorTabProject: false
     statusIconScope: "File"
-  "linter-jshint":
-    disableWhenNoJshintrcFileInPath: true
-    jshintExecutablePath: "/jnandakishore/userlocal/lib/node_modules/jshint/bin/jshint"
+  "linter-pydocstyle": {}
   "linter-pylama":
     ignoreErrorsAndWarnings: "E501,D101,D103"
     pylamaVersion: "internal"
   "merge-conflicts":
-    gitPath: "/jnandakishore/userlocal/bin/git"
+    gitPath: "$USERLOCAL/bin/git"
   minimap: {}
   "one-dark-ui":
     layoutMode: "Compact"
@@ -99,6 +107,7 @@
   "status-bar": {}
   "tree-view":
     hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
     sortFoldersBeforeFiles: false
   welcome:
     showOnStartup: false
