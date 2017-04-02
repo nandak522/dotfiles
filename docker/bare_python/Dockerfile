@@ -1,10 +1,11 @@
-FROM ubuntu:14.04
-RUN sudo apt-get autoclean
-RUN sudo apt-get clean
-RUN sudo apt-get autoremove
-RUN sudo apt-get install -y aptitude
-RUN sudo aptitude install -y build-essential \
-    curl \
-    python-dev
-RUN curl https://bootstrap.pypa.io/get-pip.py | sudo python
+FROM ubuntu:16.04
+LABEL maintainer "Nanda Kishore <madhav.bnk@gmail.com>"
+RUN apt-get update && apt-get install -y automake \
+	build-essential \
+	curl \
+	python-dev \
+    && rm -rf /var/lib/apt/lists/*
+RUN curl https://bootstrap.pypa.io/get-pip.py | python
 RUN pip install virtualenv
+ENTRYPOINT ["python"]
+CMD ["--version"]
