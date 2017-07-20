@@ -34,6 +34,7 @@
     goback = reset --hard
     ignore = update-index --assume-unchanged
     unignore = update-index --no-assume-unchanged
+    last = log -1 --pretty=last
 [blame]
     date=short
 [color]
@@ -51,6 +52,7 @@
     pretty="%Cgreen%h %Cred%ar(%ad) %Cblue<%an> %C(yellow)%d %Creset%s"
 [pretty]
     reflog="%Cgreen%h %Cred%ar(%ad) %Cblue<%an> %C(yellow)%d %Creset%s"
+    last="%h : %s"
 [core]
     editor = vim
     autocrlf = input
