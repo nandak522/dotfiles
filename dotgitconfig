@@ -16,9 +16,11 @@
     lt = log --graph --date=short --topo-order
     pur = pull --rebase
     prom = pull --rebase origin master
+    prop = pull --rebase origin prodstable
     rc = rebase --continue
     ra = rebase --abort
     pom = push origin master
+    pop = push origin prodstable
     what = whatchanged -p
     df = diff --color-words
     di = diff --ignore-space-change
@@ -35,6 +37,8 @@
     ignore = update-index --assume-unchanged
     unignore = update-index --no-assume-unchanged
     last = log -1 --pretty=last
+    ann = blame
+    his = log --graph --date=short --date-order --
 [blame]
     date=short
 [color]
@@ -54,7 +58,7 @@
     reflog="%Cgreen%h %Cred%ar(%ad) %Cblue<%an> %C(yellow)%d %Creset%s"
     last="%h : %s"
 [core]
-    editor = vim
+	editor = code --wait
     autocrlf = input
     pager = less -FRSX
     whitespace = warn
@@ -63,13 +67,16 @@
 [diff]
     mnemonicprefix = true
     renames = copies
-    tool = meld
+    tool = default-difftool
+	indentHeuristic = true
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
 [merge]
     stat = true
     verbosity = 1
     summary = true
     log = true
-    conflictstyle = diff3
+#    conflictstyle = diff3
     strategy = patience
 [url "git@github.com:"]	
     insteadOf = gh:
