@@ -5,8 +5,8 @@
     whitespace = warn
 [alias]
     st = status
-    ci = commit
-    amd = commit --amend
+    ci = commit -S
+    amd = commit -S --amend
     uncommit = reset HEAD^
     co = checkout
     br = branch
@@ -53,9 +53,9 @@
     added = green
 [format]
 #    pretty="%Cgreen%h %Cred%ar %C(yellow)%d %Creset%s %Cblue<%an> %Cred(%ad)"
-    pretty="%Cgreen%h %Cred%ar(%ad) %Cblue<%an> %C(yellow)%d %Creset%s"
+    pretty="%Cgreen%h %Cred%ar(%ad) %Cblue<%an> %C(red)(%G?) %C(yellow)%d %Creset%s"
 [pretty]
-    reflog="%Cgreen%h %Cred%ar(%ad) %Cblue<%an> %C(yellow)%d %Creset%s"
+    reflog="%Cgreen%h %Cred%ar(%ad) %Cblue<%an> %C(red)(%G?) %C(yellow)%d %Creset%s"
     last="%h : %s"
 [core]
 	editor = code --wait
@@ -92,3 +92,5 @@
     missingCommitsCheck = warn
 [difftool]
     prompt = false
+[commit]
+	gpgsign = true
