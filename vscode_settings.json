@@ -1,0 +1,19 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "editor.fontSize": 13,
+    "editor.rulers": [79],
+    "editor.renderIndentGuides": true,
+    "python.linting.flake8Enabled": true,
+    "window.zoomLevel": 0,
+    "git.confirmSync": false,
+    "workbench.colorTheme": "Dracula",
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.minimap.enabled": false,
+    "atomKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true,
+    "workbench.fontAliasing": "antialiased",
+    "files.associations": {
+        "Dockerfile*": "dockerfile"
+    }
+}
