@@ -47,10 +47,10 @@
     interactive = auto
     ui = always
     pager = true
-[color "status"]
-    untracked = black
-    changed = red
-    added = green
+# [color "status"]
+#     untracked = black
+#     changed = red
+#     added = green
 [format]
 #    pretty="%Cgreen%h %Cred%ar %C(yellow)%d %Creset%s %Cblue<%an> %Cred(%ad)"
     pretty="%Cgreen%h %Cred%ar(%ad) %Cblue<%an> %C(red)(%G?) %C(yellow)%d %Creset%s"
@@ -58,7 +58,8 @@
     reflog="%Cgreen%h %Cred%ar(%ad) %Cblue<%an> %C(red)(%G?) %C(yellow)%d %Creset%s"
     last="%h : %s"
 [core]
-	editor = code --wait
+#	editor = code --wait
+    editor = vim
     autocrlf = input
     pager = less -FRSX
     whitespace = warn
@@ -93,4 +94,6 @@
 [difftool]
     prompt = false
 [commit]
-	gpgsign = true
+    gpgsign = true
+[gpg]
+	program = /usr/local/bin/gpg2
