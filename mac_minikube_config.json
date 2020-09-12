@@ -1,0 +1,11 @@
+{
+    "cni": "flannel",
+    "cpus": 4,
+    "dashboard": true,
+    "driver": "docker",
+    "kubernetes-version": "1.19.0",
+    "memory": 8192,
+    "metrics-server": true,
+    "mount": true,
+    "mount-string": "/Users/nanda:/hosthome"
+}
