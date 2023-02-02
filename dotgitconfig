@@ -1,6 +1,7 @@
 [user]
     name = Nanda Kishore
     email = madhav.bnk@gmail.com
+    signingkey = DB62535BAC1DD108
 [apply]
     whitespace = warn
 [alias]
@@ -12,21 +13,21 @@
     br = branch
     pick = add -p
     pl = pull --verbose
-    lg = log --graph --date=short --date-order
-    lt = log --graph --date=short --topo-order
-    pur = pull --rebase
-    prom = pull --rebase origin master
-    prop = pull --rebase origin prodstable
+    lg = log --graph --date=human --date-order --abbrev=8
+    lt = log --graph --date=human --topo-order --abbrev=8
+    pur = pull --rebase --autostash
+    prom = pull --rebase --autostash origin master
+    prop = pull --rebase --autostash origin prodstable
     rc = rebase --continue
     ra = rebase --abort
     pom = push origin master
     pop = push origin prodstable
     what = whatchanged -p
     df = diff --color-words
-    di = diff --ignore-space-change
+    di = diff --color-words --ignore-space-change
     dt = difftool
     staged = diff --cached
-    unstage = reset HEAD
+    unstage = restore --staged
     credits = shortlog -sn --no-merges
     changelog = log --pretty=oneline --abbrev-commit --graph
     rlog = reflog --pretty=reflog
@@ -38,9 +39,9 @@
     unignore = update-index --no-assume-unchanged
     last = log -1 --pretty=last
     ann = blame
-    his = log --graph --date=short --date-order --
+    his = log --graph --date=human --date-order --
 [blame]
-    date=short
+    date=human
 [color]
     branch = auto
     diff = auto
@@ -58,8 +59,7 @@
     reflog="%Cgreen%h %Cred%ar(%ad) %Cblue<%an> %C(red)(%G?) %C(yellow)%d %Creset%s"
     last="%h : %s"
 [core]
-#	editor = code --wait
-    editor = vim
+    # editor = code --wait
     autocrlf = input
     pager = less -FRSX
     whitespace = warn
@@ -67,9 +67,12 @@
     fileMode = false
 [diff]
     mnemonicprefix = true
+    noprefix = false
     renames = copies
     tool = default-difftool
-	indentHeuristic = true
+    indentHeuristic = true
+    interHunkContext = 0
+    context = 0
 [difftool "default-difftool"]
     cmd = code --wait --diff $LOCAL $REMOTE
 [merge]
@@ -77,10 +80,10 @@
     verbosity = 1
     summary = true
     log = true
-#    conflictstyle = diff3
+    ; conflictstyle = diff3
     strategy = patience
-[url "git@github.com:"]	
-    insteadOf = gh:
+[url "git@github.com:"]
+    insteadOf = https://github.com/
 [url "git@github.com:none-da/"]
     insteadOf = none-da:
 [http]
@@ -96,4 +99,15 @@
 [commit]
     gpgsign = true
 [gpg]
-	program = /usr/local/bin/gpg2
+    program = /usr/local/bin/gpg
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[pull]
+  ff = only
+[init]
+    defaultBranch = main
+[help]
+   autoCorrect = prompt
