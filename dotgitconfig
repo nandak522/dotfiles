@@ -1,7 +1,7 @@
 [user]
     name = Nanda Kishore
     email = madhav.bnk@gmail.com
-    signingkey = DB62535BAC1DD108
+    signingkey = D14C3A041A952F9A
 [apply]
     whitespace = warn
 [alias]
@@ -99,7 +99,7 @@
 [commit]
     gpgsign = true
 [gpg]
-    program = /usr/local/bin/gpg
+    program = /opt/homebrew/bin/gpg
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
