@@ -1,0 +1,13 @@
+/mysql
+/charts
+/README.md
+/LICENSE
+/*.sh
+/.gitignore
+/.editorconfig
+/.git
+/docker-compose.yaml
+/.pre-commit-config.yaml
+/.env
+# /pkg/repository/_initial_data
+# /pkg/repository/migrations
