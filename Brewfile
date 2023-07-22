@@ -13,12 +13,12 @@ brew "python@3.11"
 brew "tree"
 # Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
-# Menu bar tool to limit maximum charging percentage
-cask "aldente"
 # Chromium based browser
 cask "arc"
 # Two-factor authentication software
 cask "authy"
+# Calendar for professionals and teams
+cask "cron"
 # Data recovery software
 cask "disk-drill"
 # Online diagram software
