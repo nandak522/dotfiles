@@ -1,0 +1,28 @@
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+name: multi-node
+# networking:
+#   podSubnet: "10.243.0.0/16"
+#   serviceSubnet: "10.95.0.0/16"
+#   # disableDefaultCNI: true # disable kindnetd
+nodes:
+  - role: control-plane
+    image: kindest/node:v1.27.3
+  - role: worker
+    image: kindest/node:v1.27.3
+    extraPortMappings:
+      # Try just including the ingress controller svc port
+      - containerPort: 32760
+        hostPort: 32760
+      - containerPort: 32759
+        hostPort: 32759
+      - containerPort: 32758
+        hostPort: 32758
+      - containerPort: 32757
+        hostPort: 32757
+    # kubeadmConfigPatches:
+    #   - |
+    #     kind: JoinConfiguration
+    #     nodeRegistration:
+    #       kubeletExtraArgs:
+    #         node-labels: "environment=worker"
