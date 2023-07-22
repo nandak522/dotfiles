@@ -11,3 +11,5 @@
 /.env
 # /pkg/repository/_initial_data
 # /pkg/repository/migrations
+*.code-workspace
+/vendor
