@@ -1,16 +1,38 @@
 tap "homebrew/bundle"
+# Tool for exploring each layer in a docker image
+brew "dive"
+# HTTP and gRPC load testing and visualization tool and server
+brew "fortio"
+# GitHub command-line tool
+brew "gh"
 # Distributed revision control system
 brew "git"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Kubernetes package manager
+brew "helm"
+# Deploy Kubernetes Helm Charts
+brew "helmfile"
 # Improved top (interactive process viewer)
 brew "htop"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Run local Kubernetes cluster in Docker
+brew "kind"
+# Kubernetes command-line interface
+brew "kubernetes-cli"
+# Port scanning utility for large networks
+brew "nmap"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.11"
+# Tail multiple Kubernetes pods & their containers
+brew "stern"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
 # Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
 # Chromium based browser
@@ -25,6 +47,8 @@ cask "disk-drill"
 cask "drawio"
 # Web browser
 cask "firefox"
+# Utility to hide menu bar items
+cask "hiddenbar"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # Interface for reading and syncing eBooks
@@ -35,6 +59,7 @@ cask "microsoft-teams"
 cask "notion"
 # Calculator and converter application
 cask "numi"
+# Replacement for Docker Desktop
 cask "orbstack"
 # Screen capture tool with mark up and sharing features
 cask "skitch"
