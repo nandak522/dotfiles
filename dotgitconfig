@@ -73,6 +73,7 @@
     indentHeuristic = true
     interHunkContext = 0
     context = 0
+    submodule = log
 [difftool "default-difftool"]
     cmd = code --wait --diff $LOCAL $REMOTE
 [merge]
@@ -84,8 +85,8 @@
     strategy = patience
 [url "git@github.com:"]
     insteadOf = https://github.com/
-[url "git@github.com:none-da/"]
-    insteadOf = none-da:
+[url "git@github.com:nandak522/"]
+    insteadOf = nanda:
 [http]
     sslverify = false
 [push]
@@ -110,4 +111,6 @@
 [init]
     defaultBranch = main
 [help]
-   autoCorrect = prompt
+    autoCorrect = prompt
+[protocol "file"]
+    allow = always
